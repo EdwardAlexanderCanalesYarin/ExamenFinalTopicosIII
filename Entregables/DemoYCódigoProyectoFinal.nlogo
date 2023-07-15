@@ -132,6 +132,9 @@ to go
 
     ifelse move-time > -1
     [fd 0
+      rt 90
+      fd velocidad2
+      lt 90
     set move-time move-time - 1
 
       if who-am-i = 1[
@@ -144,6 +147,9 @@ to go
     plotxy ticks global-altitude
     ]
     [fd velocidad
+      rt 90
+      fd velocidad2
+      lt 90
     set global-altitude 400
     plotxy ticks global-altitude]
 
@@ -290,10 +296,10 @@ ticks
 30.0
 
 BUTTON
-61
-91
-141
-124
+30
+114
+110
+147
 NIL
 setup
 NIL
@@ -306,41 +312,11 @@ NIL
 NIL
 1
 
-SLIDER
-46
-126
-236
-159
-diffusion-rate
-diffusion-rate
-0.0
-99.0
-47.0
-1.0
-1
-NIL
-HORIZONTAL
-
-SLIDER
-46
-161
-236
-194
-evaporation-rate
-evaporation-rate
-0.0
-99.0
-10.0
-1.0
-1
-NIL
-HORIZONTAL
-
 BUTTON
-151
-91
-226
-124
+141
+114
+216
+147
 NIL
 go
 T
@@ -384,20 +360,20 @@ true
 false
 "" ""
 PENS
-"food-in-pile1" 1.0 0 -11221820 true "" "plotxy ticks sum [food] of patches with [pcolor = pink]"
-"food-in-pile2" 1.0 0 -13791810 true "" "plotxy ticks sum [food] of patches with [pcolor = cyan]"
+"food-in-pile1" 1.0 0 -2064490 true "" "plotxy ticks sum [food] of patches with [pcolor = pink]"
+"food-in-pile2" 1.0 0 -11221820 true "" "plotxy ticks sum [food] of patches with [pcolor = cyan]"
 "food-in-pile3" 1.0 0 -13345367 true "" "plotxy ticks sum [food] of patches with [pcolor = blue]"
-"pen-3" 1.0 0 -7500403 true "" "plotxy ticks sum [food] of patches with [pcolor = green]"
-"pen-4" 1.0 0 -2674135 true "" "plotxy ticks sum [food] of patches with [pcolor = orange]"
-"pen-5" 1.0 0 -955883 true "" "plotxy ticks sum [food] of patches with [pcolor = sky]"
-"pen-6" 1.0 0 -6459832 true "" "plotxy ticks sum [food] of patches with [pcolor = red]"
-"pen-7" 1.0 0 -1184463 true "" "plotxy ticks sum [food] of patches with [pcolor = gray]"
+"pen-3" 1.0 0 -10899396 true "" "plotxy ticks sum [food] of patches with [pcolor = green]"
+"pen-4" 1.0 0 -955883 true "" "plotxy ticks sum [food] of patches with [pcolor = orange]"
+"pen-5" 1.0 0 -13791810 true "" "plotxy ticks sum [food] of patches with [pcolor = sky]"
+"pen-6" 1.0 0 -2674135 true "" "plotxy ticks sum [food] of patches with [pcolor = red]"
+"pen-7" 1.0 0 -7500403 true "" "plotxy ticks sum [food] of patches with [pcolor = gray]"
 
 PLOT
-40
-204
-240
-506
+29
+165
+229
+467
 Altura del dron
 time
 height
@@ -412,16 +388,31 @@ PENS
 "default" 1.0 0 -16777216 true "" "plotxy ticks [altitude] of patches"
 
 SLIDER
-65
-13
-237
-46
+854
+320
+1026
+353
 speed
 speed
 0.1
 2
 1.4
 0.1
+1
+NIL
+HORIZONTAL
+
+SLIDER
+854
+363
+1026
+396
+velocidad2
+velocidad2
+-1
+1
+-0.04
+0.01
 1
 NIL
 HORIZONTAL
