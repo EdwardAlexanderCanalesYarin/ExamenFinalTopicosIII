@@ -1,2 +1,2 @@
 # ExamenFinalTopicosIII
-Para visualizar la demo, descargar el documento DemoYCódigoProyectoFinal y abrirlo en NetLogo 
+Para visualizar la demo y el código, descargar el documento DemoYCódigoProyectoFinal y abrirlo en NetLogo 
